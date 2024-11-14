@@ -1,0 +1,47 @@
+View the Contents of the File
+cat fruits.txt
+2. Count the Number of Lines
+wc -l fruits.txt
+3. Display the First Few Lines
+head –n 3 fruits.txt
+4. Display the Last Few Lines
+tail –n 3 fruits.txt
+5. Search for a Specific Pattern
+grep ‘berry’ fruits.txt
+6. Delete Lines Containing a Specific Pattern
+sed ‘/banana/d’ fruits.txt > modified_fruits.txt
+cat modified_fruits.txt
+7. Insert a Line at a Specific Position
+sed ‘3i\grape’ fruits.txt > modified_fruits.txt
+cat modified_fruits.txt
+8. Replace a Specific Pattern
+sed ‘s/banana/mango/’ fruits.txt > modified_fruits.txt
+cat modified_fruits.txt
+9. Append Text to the End of the File
+echo “grapes” >> fruits.txt
+cat fruits.txt
+10. Sort the Contents of the File
+sort fruits.txt > sorted_fruits.txt
+cat sorted_fruits.txt
+11. Display Line Numbers
+nl fruits.txt
+12. Reverse order of lines
+tac fruits.txt
+13. Display Lines Matching a Specific Pattern
+grep ‘a’ fruits.txt
+14. Count Words in the File
+wc –w fruits.txt
+15. Display lines within a range
+sed –n ‘3,5p’ fruits.txt
+16. Remove Duplicate Lines
+sort fruits.txt | uniq > modified_fruits.txt
+cat modified_fruits.txt
+17. Check for a Specific Word and Display its Line Number
+grep –n ‘watermelon’ fruits.txt
+18. Calculate the Length of Each Line
+awk '{ print length, $0 }' fruits.txt
+19. Check if a File Contains a Specific Word
+grep -q 'banana' fruits.txt && echo “Found” || echo “Not
+Found”
+20. Create a Backup of a File
+cp fruits.txt backup_fruits.txt

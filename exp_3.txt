@@ -1,0 +1,21 @@
+1. Displaying the File Contents
+cat data.csv
+2. Selecting Specific Columns
+cut -d ',' -f 1,3 data.csv
+3. Extracting Specific Rows
+sed -n '2,4p' data.csv
+4. Filtering Rows Based on a Condition
+awk -F, '$2 > 30' data.csv
+5. Sorting Data
+sort -t ',' -k 2,2n data.csv
+6. Counting the Number of Rows
+wc -l data.csv
+7. Finding Unique Values in a Column
+cut -d ',' -f 3 data.csv | sort | uniq
+8. Counting the Number of Unique Values in a Column
+cut -d ',' -f 3 data.csv | sort | uniq | wc -l
+9. Replacing a Value in a Specific Column
+sed 's/Engineer/Software Engineer/' data.csv > updated_data.csv
+10. Calculating the Average Value of a Column
+awk -F, '{sum += $2; count += 1} END {print "Average Age:",
+sum/count}' data.csv
